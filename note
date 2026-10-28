@@ -1,0 +1,51 @@
+โจทย์ที่เขียนขึ้นมาเอง 
+
+
+// let quantity = prompt ("ใส่จำนวนสินค้า");
+// let sum = 0
+// for(var i=1 ; i <= quantity; i++)
+// {
+//     let item_price = prompt ("รายการสินค้าชิ้นที่ " + i);
+//     sum = sum + parseInt(item_price)
+//     document.getElementById("list").innerHTML += "รายการสินค้าชิ้นที่" + i + ": " + item_price + " บาท<br>"
+// }
+//     document.getElementById("result").innerHTML = sum
+
+// console.log(typeof(sum))
+// console.log(typeof(sum))
+
+let pieces = Number(prompt ("ต้องการซื้อสินค้ากี่ชิ้น"));
+let sum = 0
+for (var i=1 ;i <= pieces ;i++){
+    let item_price = Number(prompt ("ราคาสินค้าชิ้นที่" + i));
+    sum = sum + item_price
+    document.getElementById("Show_pieces").innerHTML = pieces
+    document.getElementById("Show_list").innerHTML += "รายการชิ้นที่"+i + "ราคา "+item_price +"บาท <br>"
+}
+    document.getElementById("Show_price").innerHTML = sum
+    let x = Number(sum)
+    if(x >= 1000){
+    Promo = x * 0.1
+    document.getElementById("Promotion_price").innerHTML = "ลดราคา" + Promo + "บาท"
+
+        a = x - Promo 
+        document.getElementById("Sum_price").innerHTML = a
+
+    }if(x >=500 && x <=999){
+    Promo = x * 0.05
+    document.getElementById("Promotion_price").innerHTML = "ลดราคา" + Promo + "บาท"
+
+        a = x - Promo
+        document.getElementById("Sum_price").innerHTML = a
+    }if(x < 500 ){
+    document.getElementById("Promotion_price").innerHTML = "ไม่ได้รับส่วนลด" 
+        document.getElementById("Sum_price").innerHTML = x
+    }
+    <body>
+    <h1>โปรแกรมคำนวนส่วนลด</h1>
+    <p>จำนวนรายการสินค้า = <span id="Show_pieces"></span></p>
+    <p>---------------------<br><span id="Show_list"></span></p>
+    <p>ราคารวมก่อนลด =<span id="Show_price"><span>บาท</span></span></p>
+    <p>ราคาโปรโมชั่น : <span id="Promotion_price"></span></p>
+    <p>ราคาที่ต้องชำระ <span id="Sum_price"></span></p>
+</body>
