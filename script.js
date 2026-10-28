@@ -1,19 +1,25 @@
-let list_order = Number(prompt ("กรุงณาใส่จำนวนสินค้าของท่าน"));
-let sum = 0
-let countPremium = 0
-document.getElementById("l_o").innerHTML = list_order
+let round = Number(prompt ("คุณจะเล่นทั้งกี่รอบ"));
+    console.log("คำตอบ : เฉลย")
+    let correct = 0
+    let not_correct = 0
+for(var i=0 ; i < round ; i++){
+    var answer = prompt ("หัว หรือ ก้อย");
+    var random_answer = ""
 
-for(i = 1 ; i <= list_order ;i++){
-    let price_order = Number(prompt ("ใส่ราคาสินค้าแต่ละชิ้น" + i));
-    sum = sum + price_order
-    document.getElementById("p_o").innerHTML += "สินค้าชิ้นที่ "+i +" ราคา " + price_order + " บาท <br>"
-    if(price_order >=100){countPremium++;}
-}
-console.log(countPremium)
-document.getElementById("show_sum").innerHTML = sum + " บาท"
+    if(Math.floor(Math.random()*10 ) <= 4){
+        random_answer = "หัว"
+    }else{
+        random_answer = "ก้อย"
+    }
 
-if( countPremium >= 3){
-    document.getElementById("p_c").innerHTML = "ได้รับสิทธิ์แลกซื้อน้ำ 1 แพ็คแล้วน้าา"
-}if( countPremium < 3){
-    document.getElementById("p_c").innerHTML = "เสียใจด้วยคุณยังไม่เข้าเงื่อนไข"
+    if(answer == random_answer){
+        alert("ตอบถูก") 
+        correct++; 
+    }else{
+        alert("ตอบผิด")
+        not_correct++;
+    }
+    document.getElementById("Game-list").innerHTML += "คุณตอบ " + answer +" และคำตอบคือ "+ random_answer +"<br>" 
+    console.log(answer+":"+random_answer)
+    document.getElementById("Game-list2").innerHTML = "คุณทายถูก "+correct+" ข้อ" + " และท้ายผิดไป " + not_correct+" ข้อ"
 }
