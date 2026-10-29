@@ -49,3 +49,5 @@ for (var i=1 ;i <= pieces ;i++){
     <p>ราคาโปรโมชั่น : <span id="Promotion_price"></span></p>
     <p>ราคาที่ต้องชำระ <span id="Sum_price"></span></p>
 </body>
+
+ทดสอบคอมมิตบนกิต 
