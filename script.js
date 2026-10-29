@@ -40,4 +40,5 @@ function showBMR() {
     let result = calculateBMR(weight, height, age);
 
     document.getElementById("Show_value").textContent = result;
+    console.log( "แคลที่ร่างกายคุณต้องการ = "+result)
 }
