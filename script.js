@@ -1,3 +1,26 @@
+// function tocelsius (fahrenheit){
+//     let value = (fahrenheit - 32 ) * 5/9
+//     return value.toFixed(2) + " °C";
+// }
+// function display (elementId , value){
+//     document.getElementById(elementId).innerHTML = value
+// }
+// function tofahrenheit (celsius){
+//     let value = (celsius * 9) / 5 + 32
+//     return value.toFixed(2) + " °F";
+// }
+
+// display("Show_value",tocelsius (value))
+// display("Show_value2",tofahrenheit(value))
+
+// function alertToCelsius (value){
+//     alert (tocelsius(value))
+//     return tocelsius(value)
+// }
+
+// function alertTofahrenheit(value){
+//     alert(tofahrenheit(value))
+// }
 function calculateBMR (weight , height , age){
     console.log("ค่าน้ำหนักที่รับมา:", weight);
     console.log("ค่าส่วนสูงที่รับมา:", height);
