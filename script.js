@@ -1,25 +1,27 @@
-function toCelsius(fahrenheit){
-    let value = (fahrenheit -32) * 5 / 9
-    return value.toFixed(2)+" °C"
-}
-function tofehrenheit(celsius){
-    let value = (celsius *9) / 5 + 32
-    return value.toFixed(2) + " °F "
+function calculateBMI(height , weight){
+    let x = height / 100
+    let BMI = weight / (x * x)
+    return BMI.toFixed(2);
 }
 
-function display(elementId,value){
-    document.getElementById(elementId).innerHTML = "<i>"+value+"</i>"
+function getBMIStatus (bmi){
+    if(bmi < 18.5 ){
+        return "น้ำหนักน้อย / ผอม"
+    }else if(bmi >18.5 && bmi < 24.9){
+        return "น้ำหนักปกติ (สุขภาพดี)"
+    }else if(bmi > 25.0 && bmi < 29.9){
+        return "ท้วม / น้ำหนักเกิน"
+    }else{
+        return "อ้วน"
+    }
 }
+function display (elementId , value){
+    document.getElementById(elementId).innerHTML = value
+}
+let InputHeight = prompt("Input your Height :");
+let Inputweight = prompt("Input your weight :");
+let result = parseFloat(calculateBMI(InputHeight,Inputweight))
 
-alert(toCelsius(91))
-display("Show_value", toCelsius(91))
-alert(tofehrenheit(91))
-display("Show_value2",tofehrenheit(28))
-
-// let Inputfahrenheit = prompt ("Input your Fahrenheit :")
-// toCelsius(Inputfahrenheit)
-// document.getElementById("Show_value").innerHTML = toCelsius(Inputfahrenheit)
-
-// let InputCelsius = prompt ("Input your Celsius :")
-// tofehrenheit(InputCelsius)
-// document.getElementById("Show_value2").innerHTML = tofehrenheit(InputCelsius)
+console.log(result)
+console.log(getBMIStatus(result))
+display("Show_value",getBMIStatus(result))
