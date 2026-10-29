@@ -4,11 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>ระบบประเมินสุขภาพและคำนวณ BMI อัจฉริยะ</h1>
-    <p><span id="Show_value"></span></p>
-    <p><span id="Show_value2"></span></p>
+    <h2 class="navhead">โปรแกรมคำนวนแคลลอรี่</h2>
+    
+    <section id="sec">
+        <div id="sech3"><h3 class="sech3">แคลที่ต้องการ/วัน BMR</h3>
+        <p class="secp">กรุณากรอกข้อมูลทางร่างกาย เพื่อคำนวนพลังงาน</p></div>
+        <div id="secInput">
+        <p>กรอกน้ำหนัก<br><input id="InputWeight" type="text"></p>
+        <p>กรอกส่วนสูง<br><input id="InputHeight" type="text"></p>
+        <p>กรอกอายุ<br><input id="InputAge" type="number"></p></div>
+        <button id="BMRId" onclick="showBMR()">คำนวนค่า</button>
+        <h3>แคลที่ท่านต้องการ <br><span id="Show_value"></span></h3>
+    </section>
 </body>
 <script src="script.js"></script>
 </html>
