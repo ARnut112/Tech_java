@@ -7,18 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2 class="navhead">โปรแกรมคำนวณแคลอรี่</h2>
-    
-    <section id="sec">
-        <div id="sech3"><h3 class="sech3">แคลที่ต้องการ/วัน BMR</h3>
-        <p class="secp">กรุณากรอกข้อมูลทางร่างกาย เพื่อคำนวนพลังงานที่ต้องกาาร</p></div>
-        <div id="secInput">
-        <p>กรอกน้ำหนัก<br><input id="InputWeight" type="text"></p>
-        <p>กรอกส่วนสูง<br><input id="InputHeight" type="text"></p>
-        <p>กรอกอายุ<br><input id="InputAge" type="number"></p></div>
-        <button id="BMRId" onclick="showBMR()">คำนวนค่า</button>
-        <h3>แคลที่ท่านต้องการ <br><span id="Show_value"></span></h3>
-    </section>
+    <h3>โปรแกรมคำนวณเกรด</h3>
+
+
+    <p>เกรดของท่านคือ : <span id="Show_value"></span></p>
+    <input type="text" id="InputScore" placeholder="Input your Score">
+    <input type="text" id="InputName" placeholder="Input your Name">
+    <button type="button" onclick="letScore()">ยืนยันคะแนน</button>
+
 </body>
 <script src="script.js"></script>
 </html>
